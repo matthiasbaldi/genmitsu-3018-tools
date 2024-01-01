@@ -1,0 +1,11 @@
+[Unit]
+Description=CNC Camera Stream
+After=multi-user.target
+
+[Service]
+Type=idle
+User=pi
+ExecStart=/usr/bin/python3 /home/pi/genmitsu-3018-tools/rpi_camera.py
+
+[Install]
+WantedBy=multi-user.target
